@@ -4,4 +4,7 @@ class Task < ActiveRecord::Base
 
 	belongs_to :list
 
+	scope :terminadas, -> { where(completed: true) }
+	scope :incompletas, -> { where(completed: false) }
+
 end
