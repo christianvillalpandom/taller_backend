@@ -2,7 +2,7 @@
 
 User.destroy_all
 
-tasks = [
+tareas = [
 	'Comer',
 	'Correr',
 	'Caminar',
@@ -12,14 +12,17 @@ tasks = [
 ]
 
 listas = %w(
-	Autos Casas Marcas Comidas
+	Autos Casas Marcas Comidas Paises Ciudades
 )
 
-var_usuario = rand(5)+1
+var_lista = rand(5)+1
 
+var_lista.times do |n|
+	List.create(title: n)
+end
 
-User.all.each do |usuario|
-  var_usuario.times do |index|
-  user.listas << User.create(name: listas.sample)
-end 
+List.all.each do |n|
+	3.times do |m|
+		List.user_id << Task.create(title: lists[m])
+	end
 end
